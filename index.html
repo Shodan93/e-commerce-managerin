@@ -56,7 +56,7 @@
     .video-tile { cursor: pointer; }
     /* buttons: dark slate with white text, hover/focus = instant switch to the teal accent with white text; no transition */
     .cta-mail:hover, .cta-mail:focus-visible, .cta-phone:hover, .cta-phone:focus-visible { background-color: var(--accent-teal) !important; color: var(--white) !important; border-color: var(--accent-teal) !important; }
-    .cta-mail:focus-visible, .cta-phone:focus-visible { outline: 2px solid var(--ink-900); outline-offset: 3px; }
+    .cta-mail:focus-visible, .cta-phone:focus-visible { outline: 2px solid #ffffff; outline-offset: 3px; }
     .btn-pill:hover, .btn-pill:focus-visible { background-color: var(--accent-teal) !important; color: var(--white) !important; }
     .btn-pill:focus-visible { outline: 3px solid var(--ink-900); outline-offset: 3px; }
     /* preview hover: the play button swaps teal/white, instantly (no transition) */
@@ -77,7 +77,7 @@
     <header style="{{ heroStyle }}">
       <div style="{{ heroTopRowStyle }}">
         <span style="{{ heroLogoStyle }}">Svenja Mumelter<span style="{{ heroLogoDotStyle }}" aria-hidden="true">.</span></span>
-        <nav aria-label="Inhalt" class="toc" style="{{ navStyle }}"><a href="#ueber-mich">Über mich</a><a href="#royalshrimp">Case RoyalShrimp</a><a href="#cuply">Case Cuply</a><a href="#kontakt">Kontakt</a></nav>
+        <nav aria-label="Inhalt" class="toc" style="{{ navStyle }}"><a href="#ueber-mich">Über mich</a><a href="#ansatz">Ansatz</a><a href="#royalshrimp">Case RoyalShrimp</a><a href="#cuply">Case Cuply</a><a href="#kontakt">Kontakt</a></nav>
       </div>
       <div style="{{ heroTextStyle }}">
         <p style="{{ heroKickerStyle }}">Bewerbung als E&#8209;Commerce Managerin</p>
@@ -85,40 +85,61 @@
       </div>
     </header>
 
-    <section id="ueber-mich" aria-label="Über mich" style="{{ quoteBandStyle }}">
+    <section aria-label="Begrüßung" style="{{ quoteBandStyle }}">
       <div style="{{ quoteInnerStyle }}">
         <div style="{{ quoteTextWrapStyle }}">
           <blockquote style="{{ introAboutStyle }}"><span style="{{ quoteMarkOpenStyle }}" aria-hidden="true">&bdquo;</span>Guten Tag Frau Tornow&#8209;Dolezal,<span style="{{ quoteParaStyle }}">statt eines klassischen Anschreibens habe ich diese Seite für Sie und Ihre Kunden konzipiert und umgesetzt. Hier finden Sie zwei konkrete Arbeitsproben: meinen eigenen Onlineshop und einen Marketing-Case aus meiner Weiterbildung zur E&#8209;Commerce Managerin.<span style="{{ quoteMarkCloseStyle }}" aria-hidden="true">&ldquo;</span></span></blockquote>
           <div style="{{ quoteCaptionStyle }}">
             <span style="{{ quoteNameStyle }}">Svenja Mumelter</span>
-            <span style="{{ quoteRoleStyle }}">E&#8209;Commerce · Onlineshop · Customer Journey · Conversion</span>
           </div>
         </div>
-        <img src="assets/svenja-portrait-03.jpg" alt="Svenja Mumelter" width="204" height="204" style="{{ introPortraitStyle }}" />
       </div>
     </section>
 
-    <div id="intro" style="{{ introStyle }}" data-section="intro">
+    <section id="ueber-mich" aria-labelledby="ueber-mich-title" style="{{ aboutStyle }}">
+      <div style="{{ aboutPhotoWrapStyle }}">
+        <div style="{{ aboutPhotoBlockStyle }}" aria-hidden="true"></div>
+        <img src="assets/svenja-portrait-yer.jpg" alt="Svenja Mumelter" width="880" height="1100" style="{{ aboutPhotoStyle }}" />
+      </div>
+      <div style="{{ aboutTextStyle }}">
+        <span style="{{ sectionLabelStyle }}">Kurz über mich</span>
+        <h2 id="ueber-mich-title" style="{{ introH2Style }}">Unternehmerisch gedacht. <span style="{{ h2AccentStyle }}">Kundennah umgesetzt.</span></h2>
+        <p style="{{ aboutLeadStyle }}">Ich habe einen Onlineshop mitgegründet, aufgebaut und fünf Jahre lang selbst gesteuert. Parallel habe ich eine Filiale mit Fotostudio geleitet, mit Umsatz&#8209;, Margen&#8209; und Ergebnisverantwortung. Ich weiß also, wie sich jede Entscheidung im Shop in Zahlen niederschlägt.</p>
+        <p style="{{ aboutBodyStyle }}">Mit der Vollzeitweiterbildung zur Applied E&#8209;Commerce Managerin habe ich dieses Praxiswissen 2026 systematisch ergänzt: Shopify, A/B&#8209;Testing, Conversion&#8209;Tracking, Google Analytics 4 und Marketing Automation. Als Grafik&#8209;Designerin und Fotomedienfachfrau bringe ich außerdem ein sicheres Auge für Produktpräsentation mit.</p>
+        <dl style="{{ factsStyle }}">
+          <div style="{{ factStyle }}"><dt style="{{ factNumStyle }}">5&nbsp;Jahre</dt><dd style="{{ factTextStyle }}">eigener Onlineshop als Mitgründerin</dd></div>
+          <div style="{{ factStyle }}"><dt style="{{ factNumStyle }}">4½&nbsp;Jahre</dt><dd style="{{ factTextStyle }}">Filialleitung mit Umsatz&#8209; und Margenverantwortung</dd></div>
+          <div style="{{ factStyle }}"><dt style="{{ factNumStyle }}">96&nbsp;%</dt><dd style="{{ factTextStyle }}">Abschluss als Applied E&#8209;Commerce Managerin</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section id="ansatz" aria-labelledby="ansatz-title" style="{{ introStyle }}" data-section="intro">
       <div style="{{ skillsHeadStyle }}">
         <span style="{{ sectionLabelStyle }}">Mein Ansatz</span>
-        <h2 style="{{ introH2Style }}">Shop, Daten und Kunde. <span style="{{ h2AccentStyle }}">Zusammen gedacht.</span></h2>
+        <h2 id="ansatz-title" style="{{ introH2Style }}">Analysieren. Testen. <span style="{{ h2AccentStyle }}">Skalieren.</span></h2>
+        <p style="{{ approachLeadStyle }}">Gute Shops entstehen nicht aus Bauchgefühl, sondern aus vielen kleinen, gemessenen Verbesserungen. So gehe ich dabei vor:</p>
       </div>
-      <div style="{{ skillsGridStyle }}">
-        <div style="{{ skillStyle }}">
-          <svg width="{{ skillIconSize }}" height="{{ skillIconSize }}" viewBox="0 0 48 48" fill="none" stroke="#2e6b64" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="10" y="4" width="28" height="40" rx="3"></rect><path d="M16 13h16M16 19h16M16 25h9"></path><rect x="16" y="31" width="16" height="7" rx="1.5"></rect></svg>
-          <h3 style="{{ skillTitleStyle }}">Shop&#8209;Steuerung.</h3>
-          <p style="{{ skillTextStyle }}">Fünf Jahre habe ich meinen eigenen Onlineshop direkt an Endkunden geführt: Produktseiten, Sortiment, Checkout und Kampagnen aus einer Hand.</p>
-        </div>
-        <div style="{{ skillStyle }}">
-          <svg width="{{ skillIconSize }}" height="{{ skillIconSize }}" viewBox="0 0 48 48" fill="none" stroke="#2e6b64" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="36" height="28" rx="3"></rect><path d="M3 14h36"></path><path d="M8 10.5h.01M12 10.5h.01M16 10.5h.01"></path><path d="M9 21h14M9 27h8"></path><circle cx="33" cy="31" r="7" fill="#fbfcfc"></circle><path d="m38 36 6 6"></path></svg>
-          <h3 style="{{ skillTitleStyle }}">Testen &amp; Optimieren.</h3>
-          <p style="{{ skillTextStyle }}">Ich arbeite hypothesengetrieben: Customer Journey analysieren, Varianten testen, KPIs auswerten und die Conversion Schritt für Schritt verbessern.</p>
-        </div>
-        <div style="{{ skillStyle }}">
-          <svg width="{{ skillIconSize }}" height="{{ skillIconSize }}" viewBox="0 0 48 48" fill="none" stroke="#2e6b64" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 5c1.3 7.6 5.4 11.7 13 13-7.6 1.3-11.7 5.4-13 13-1.3-7.6-5.4-11.7-13-13 7.6-1.3 11.7-5.4 13-13Z"></path><path d="M36 27c.7 4 2.9 6.3 7 7-4.1.7-6.3 2.9-7 7-.7-4.1-3-6.3-7-7 4-.7 6.3-3 7-7Z"></path><path d="M9 36v6M6 39h6"></path></svg>
-          <h3 style="{{ skillTitleStyle }}">Schnittstelle &amp; KI.</h3>
-          <p style="{{ skillTextStyle }}">Ich übersetze zwischen Marketing, UX/UI, CRM und Entwicklung und automatisiere Abläufe mit Tools wie Brevo und n8n, gern KI&#8209;gestützt.</p>
-        </div>
+      <ol style="{{ stepsStyle }}">
+        <li style="{{ stepStyle }}">
+          <div style="{{ stepTopStyle }}"><span style="{{ stepNumStyle }}">01</span><svg width="{{ stepIconSize }}" height="{{ stepIconSize }}" viewBox="0 0 48 48" fill="none" stroke="#2e6b64" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="36" height="28" rx="3"></rect><path d="M3 14h36"></path><path d="M8 10.5h.01M12 10.5h.01M16 10.5h.01"></path><path d="M9 21h14M9 27h8"></path><circle cx="33" cy="31" r="7" fill="#ffffff"></circle><path d="m38 36 6 6"></path></svg></div>
+          <h3 style="{{ skillTitleStyle }}">Analysieren.</h3>
+          <p style="{{ skillTextStyle }}">Ich schaue mit den Augen der Kunden und mit Blick auf die Zahlen auf den Shop: Wo bricht die Customer Journey ab, welche KPI bremst, welche Produktseite verschenkt Potenzial?</p>
+        </li>
+        <li style="{{ stepStyle }}">
+          <div style="{{ stepTopStyle }}"><span style="{{ stepNumStyle }}">02</span><svg width="{{ stepIconSize }}" height="{{ stepIconSize }}" viewBox="0 0 48 48" fill="none" stroke="#2e6b64" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="8" width="17" height="24" rx="2.5"></rect><rect x="27" y="8" width="17" height="24" rx="2.5"></rect><path d="M9 14h7M9 19h5M32 14h7M32 19h5"></path><path d="M12.5 38v4M35.5 38v4M12.5 42h23"></path><path d="m31.5 25 3 3 5-6"></path></svg></div>
+          <h3 style="{{ skillTitleStyle }}">Testen.</h3>
+          <p style="{{ skillTextStyle }}">Aus jeder Beobachtung wird eine klare Hypothese. Ich setze A/B&#8209;Tests auf, werte sie sauber aus und entscheide auf Basis von Daten.</p>
+        </li>
+        <li style="{{ stepStyle }}">
+          <div style="{{ stepTopStyle }}"><span style="{{ stepNumStyle }}">03</span><svg width="{{ stepIconSize }}" height="{{ stepIconSize }}" viewBox="0 0 48 48" fill="none" stroke="#2e6b64" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 42h38"></path><rect x="8" y="30" width="7" height="12" rx="1.5"></rect><rect x="20.5" y="22" width="7" height="20" rx="1.5"></rect><rect x="33" y="12" width="7" height="30" rx="1.5"></rect><path d="M7 21 18 11l7 5L38 5"></path><path d="M32 5h6v6"></path></svg></div>
+          <h3 style="{{ skillTitleStyle }}">Skalieren.</h3>
+          <p style="{{ skillTextStyle }}">Was wirkt, bringe ich gemeinsam mit UX/UI, CRM und Entwicklung in alle Shops und Märkte: dokumentiert, messbar und mit KI und Automatisierung effizient umgesetzt.</p>
+        </li>
+      </ol>
+      <div style="{{ toolsRowStyle }}">
+        <span style="{{ sectionLabelStyle }}">Tools</span>
+        <ul style="{{ toolsListStyle }}"><li style="{{ toolChipStyle }}">Shopify</li><li style="{{ toolChipStyle }}">WooCommerce</li><li style="{{ toolChipStyle }}">Magento</li><li style="{{ toolChipStyle }}">Google Analytics 4</li><li style="{{ toolChipStyle }}">Google Tag Manager</li><li style="{{ toolChipStyle }}">Brevo</li><li style="{{ toolChipStyle }}">n8n</li><li style="{{ toolChipStyle }}">KI&#8209;Tools</li></ul>
       </div>
       <section id="kontakt" aria-labelledby="kontakt-title" style="{{ ctaStyle }}">
         <div style="{{ ctaTextWrapStyle }}">
@@ -130,7 +151,7 @@
           <a href="tel:+4917681922933" class="cta-phone" aria-label="Svenja Mumelter anrufen: 0176 81922933" style="{{ ctaPhoneStyle }}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg><span>0176 81922933</span></a>
         </div>
       </section>
-    </div>
+    </section>
 
   </div>
 
@@ -349,23 +370,59 @@ class Component extends DCLogic {
         fontFamily: archivo, fontWeight: 700, fontSize: 15, letterSpacing: "0.1em", textTransform: "uppercase",
         lineHeight: 1.5, color: "#ffffff",
       },
-      quoteRoleStyle: {
-        fontFamily: archivo, fontWeight: 400, fontSize: 15,
-        lineHeight: 1.5, color: "#c3d3d3",
+      /* "Kurz über mich": large 4:5 portrait with a flat mint block offset behind it, copy + three key facts right */
+      aboutStyle: {
+        display: "flex", flexDirection: m ? "column" : "row",
+        alignItems: m ? "flex-start" : "center",
+        gap: m ? 44 : "clamp(56px, 7vw, 104px)",
+        padding: m ? "60px 24px 64px 24px" : "108px 72px 116px 72px",
       },
-      introPortraitStyle: {
-        width: m ? 136 : 204, height: m ? 136 : 204, flexShrink: 0,
-        borderRadius: "50%", objectFit: "cover", display: "block",
-        order: m ? -1 : 0,
-        marginRight: m ? 0 : "clamp(24px, 6vw, 88px)", /* still clearly right, but a little closer to the copy */
+      aboutPhotoWrapStyle: {
+        position: "relative", flexShrink: 0,
+        width: m ? "min(calc(100% - 18px), 320px)" : "clamp(300px, 30vw, 420px)",
+        marginRight: m ? 18 : 28, marginBottom: m ? 18 : 28,
+      },
+      aboutPhotoBlockStyle: {
+        position: "absolute", top: m ? 18 : 28, left: m ? 18 : 28, right: m ? -18 : -28, bottom: m ? -18 : -28,
+        backgroundColor: "#d7e9e4", borderRadius: 18,
+      },
+      aboutPhotoStyle: {
+        position: "relative", display: "block", width: "100%", height: "auto",
+        aspectRatio: "4 / 5", objectFit: "cover", borderRadius: 18,
+        border: "1px solid #e1e8e8", boxSizing: "border-box", /* white studio background needs a hairline edge on the off-white page */
+      },
+      aboutTextStyle: { display: "flex", flexDirection: "column", gap: m ? 16 : 20, maxWidth: 680, minWidth: 0 },
+      aboutLeadStyle: {
+        fontFamily: archivo, fontWeight: 500, fontSize: m ? 18 : 20, lineHeight: 1.6,
+        color: strong, margin: m ? "4px 0 0 0" : "8px 0 0 0",
+      },
+      aboutBodyStyle: {
+        fontFamily: archivo, fontWeight: 400, fontSize: m ? 16 : 17, lineHeight: 1.7,
+        color: bodyText, margin: 0,
+      },
+      factsStyle: m ? {
+        display: "flex", flexDirection: "column", gap: 18,
+        margin: "12px 0 0 0", paddingTop: 24, borderTop: "1px solid var(--border-subtle)", width: "100%",
+      } : {
+        display: "grid", gridTemplateColumns: "repeat(3, minmax(0, 1fr))", gap: 28,
+        margin: "16px 0 0 0", paddingTop: 28, borderTop: "1px solid var(--border-subtle)", width: "100%",
+      },
+      factStyle: { display: "flex", flexDirection: "column", gap: 6, minWidth: 0 },
+      factNumStyle: {
+        fontFamily: "var(--font-headline)", fontWeight: 800, fontSize: m ? 32 : 38,
+        lineHeight: 1.05, letterSpacing: "-0.02em", color: accent, margin: 0, whiteSpace: "nowrap",
+      },
+      factTextStyle: {
+        fontFamily: archivo, fontWeight: 500, fontSize: m ? 15 : 15.5, lineHeight: 1.45,
+        color: muted, margin: 0,
       },
 
       /* "Mein Ansatz": label + two-tone uppercase headline + three skill blocks with thin teal line icons */
       introStyle: {
         position: "relative", zIndex: 1,
-        backgroundColor: "transparent",
-        display: "flex", flexDirection: "column", gap: m ? 34 : 54,
-        padding: m ? "54px 24px 48px 24px" : "95px 72px 82px 72px",
+        backgroundColor: "var(--surface-sunken)",
+        display: "flex", flexDirection: "column", gap: m ? 32 : 48,
+        padding: m ? "60px 24px 56px 24px" : "104px 72px 96px 72px",
         alignItems: "flex-start",
       },
       skillsHeadStyle: { display: "flex", flexDirection: "column", gap: m ? 12 : 16 },
@@ -381,13 +438,42 @@ class Component extends DCLogic {
         color: strong, margin: 0, maxWidth: 1240,
       },
       h2AccentStyle: { display: "block", color: accent },
-      skillsGridStyle: m ? {
-        display: "flex", flexDirection: "column", gap: 30, width: "100%",
-      } : {
-        display: "grid", gridTemplateColumns: "repeat(3, minmax(0, 1fr))", gap: 48, width: "100%",
+      approachLeadStyle: {
+        fontFamily: archivo, fontWeight: 400, fontSize: m ? 17 : 18.5, lineHeight: 1.6,
+        color: bodyText, margin: m ? "4px 0 0 0" : "6px 0 0 0", maxWidth: 720,
       },
-      skillStyle: { display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 12 },
-      skillIconSize: m ? 42 : 48,
+      /* three process steps as flat white tiles on the sunken section, big teal step numbers */
+      stepsStyle: m ? {
+        listStyle: "none", margin: 0, padding: 0,
+        display: "flex", flexDirection: "column", gap: 16, width: "100%",
+      } : {
+        listStyle: "none", margin: 0, padding: 0,
+        display: "grid", gridTemplateColumns: "repeat(3, minmax(0, 1fr))", gap: 24, width: "100%",
+      },
+      stepStyle: {
+        display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 12,
+        backgroundColor: "var(--white)", borderRadius: 16,
+        padding: m ? "24px 22px 26px 22px" : "32px 32px 36px 32px",
+      },
+      stepTopStyle: {
+        display: "flex", alignItems: "center", justifyContent: "space-between",
+        width: "100%", marginBottom: m ? 4 : 10,
+      },
+      stepNumStyle: {
+        fontFamily: "var(--font-headline)", fontWeight: 800, fontSize: m ? 38 : 48,
+        lineHeight: 1, letterSpacing: "-0.03em", color: accent,
+      },
+      stepIconSize: m ? 38 : 44,
+      toolsRowStyle: {
+        display: "flex", flexDirection: m ? "column" : "row", flexWrap: "wrap",
+        alignItems: m ? "flex-start" : "center", gap: m ? 12 : "12px 20px", width: "100%",
+      },
+      toolsListStyle: { listStyle: "none", margin: 0, padding: 0, display: "flex", flexWrap: "wrap", gap: 8 },
+      toolChipStyle: {
+        fontFamily: archivo, fontWeight: 600, fontSize: m ? 14 : 14.5, lineHeight: 1.3,
+        color: strong, backgroundColor: "var(--white)",
+        border: "1px solid var(--border-subtle)", borderRadius: 999, padding: "7px 14px",
+      },
       skillTitleStyle: {
         fontFamily: archivo, fontWeight: 700, fontSize: m ? 18 : 19, lineHeight: 1.2,
         letterSpacing: "0.02em", textTransform: "uppercase",
@@ -410,7 +496,8 @@ class Component extends DCLogic {
         gap: m ? 18 : "16px 32px", width: "100%", boxSizing: "border-box",
         padding: m ? "22px 20px" : "24px 32px",
         borderRadius: 16,
-        backgroundColor: "var(--surface-sunken)",
+        backgroundColor: "#1f3b3d", /* same deep teal-slate as the greeting band */
+        marginTop: m ? 8 : 16,
       },
       ctaTextWrapStyle: {
         display: "flex", flexDirection: "column", gap: 4, minWidth: 0,
@@ -418,12 +505,12 @@ class Component extends DCLogic {
       },
       ctaLabelStyle: {
         fontFamily: archivo, fontWeight: 600, fontSize: 13,
-        letterSpacing: "0.1em", textTransform: "uppercase", lineHeight: 1.4, color: muted, margin: 0,
+        letterSpacing: "0.1em", textTransform: "uppercase", lineHeight: 1.4, color: "#c3d3d3", margin: 0,
       },
       ctaTextStyle: {
         fontFamily: archivo, fontWeight: 600,
-        fontSize: m ? 18 : 20, lineHeight: 1.35,
-        color: strong, margin: 0,
+        fontSize: m ? 18 : 21, lineHeight: 1.35,
+        color: "#ffffff", margin: 0,
       },
       ctaLinksStyle: {
         display: "flex", flexDirection: "row", flexWrap: "wrap",
@@ -431,23 +518,22 @@ class Component extends DCLogic {
       },
       ctaMailStyle: {
         display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 8,
-        height: 42, padding: "0 18px", borderRadius: 8, border: "1.5px solid var(--ink-900)",
-        backgroundColor: "var(--ink-900)", color: "#ffffff",
+        height: 42, padding: "0 18px", borderRadius: 8, border: "1.5px solid #ffffff",
+        backgroundColor: "#ffffff", color: "var(--ink-900)",
         fontFamily: archivo, fontWeight: 600, fontSize: 16,
         textDecoration: "none", whiteSpace: "nowrap", boxSizing: "border-box",
       },
       ctaPhoneStyle: {
         display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 8,
-        height: 42, padding: "0 16px", borderRadius: 8, border: "1.5px solid var(--ink-900)",
-        backgroundColor: "transparent", color: "var(--ink-900)",
+        height: 42, padding: "0 16px", borderRadius: 8, border: "1.5px solid rgba(255,255,255,0.6)",
+        backgroundColor: "transparent", color: "#ffffff",
         fontFamily: archivo, fontWeight: 600, fontSize: 16,
         textDecoration: "none", whiteSpace: "nowrap", boxSizing: "border-box",
       },
       case1Style: {
         position: "relative",
         zIndex: 1,
-        /* flat muted panel (no gradient) */
-        backgroundColor: "var(--surface-sunken)",
+        backgroundColor: paper,
         display: "flex",
         flexDirection: "column",
         gap: m ? 24 : 32,
@@ -602,13 +688,13 @@ class Component extends DCLogic {
 
       case2Style: {
         position: "relative",
-        backgroundColor: paper,
+        backgroundColor: "var(--surface-sunken)",
         display: "flex", flexDirection: "column",
         gap: m ? 24 : 20,
-        padding: m ? "48px 24px" : "48px 72px",
+        padding: m ? "56px 24px 60px 24px" : "88px 72px 96px 72px",
         alignItems: "flex-start", overflow: "hidden",
       },
-      /* Case 2 sits on the plain page colour, no gradient */
+      /* Case 2 sits on the flat sunken colour, no gradient */
       case2BgStyle: { display: "none" },
       case2WashStyle: { display: "none" },
 
