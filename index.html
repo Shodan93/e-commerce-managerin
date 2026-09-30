@@ -88,7 +88,7 @@
     <section aria-label="Begrüßung" style="{{ quoteBandStyle }}">
       <div style="{{ quoteInnerStyle }}">
         <div style="{{ quoteTextWrapStyle }}">
-          <blockquote style="{{ introAboutStyle }}"><span style="{{ quoteMarkOpenStyle }}" aria-hidden="true">&bdquo;</span>Guten Tag Frau Tornow&#8209;Dolezal,<span style="{{ quoteParaStyle }}">statt eines klassischen Anschreibens habe ich diese Seite für Sie und Ihre Kunden konzipiert und umgesetzt. Hier finden Sie zwei konkrete Arbeitsproben: meinen eigenen Onlineshop und einen Marketing-Case aus meiner Weiterbildung zur E&#8209;Commerce Managerin.<span style="{{ quoteMarkCloseStyle }}" aria-hidden="true">&ldquo;</span></span></blockquote>
+          <blockquote style="{{ introAboutStyle }}"><span style="{{ quoteMarkOpenStyle }}" aria-hidden="true">&bdquo;</span>Statt eines klassischen Anschreibens zeige ich Ihnen hier, wie ich arbeite: mit einem Video meines eigenen Onlineshops und einer Case Study aus meiner Weiterbildung.<span style="{{ quoteMarkCloseStyle }}" aria-hidden="true">&ldquo;</span></blockquote>
           <div style="{{ quoteCaptionStyle }}">
             <span style="{{ quoteNameStyle }}">Svenja Mumelter</span>
           </div>
@@ -345,7 +345,7 @@ class Component extends DCLogic {
         position: "relative", zIndex: 1,
         backgroundColor: "#1f3b3d", /* deep teal-slate */
         display: "flex", justifyContent: "center",
-        padding: m ? "36px 24px 38px 24px" : "40px 72px 40px 72px",
+        padding: m ? "26px 24px 28px 24px" : "28px 72px 30px 72px", /* compact: the band should not dominate the page */
       },
       quoteInnerStyle: {
         display: "flex", flexDirection: m ? "column" : "row",
@@ -365,7 +365,7 @@ class Component extends DCLogic {
         color: "var(--accent-mint)", fontWeight: 600,
       },
       quoteMarkCloseStyle: { color: "var(--accent-mint)", fontWeight: 600 },
-      quoteCaptionStyle: { display: "flex", flexDirection: "column", gap: 2, marginTop: m ? 14 : 18 },
+      quoteCaptionStyle: { display: "flex", flexDirection: "column", gap: 2, marginTop: m ? 10 : 12 },
       quoteNameStyle: {
         fontFamily: archivo, fontWeight: 700, fontSize: 15, letterSpacing: "0.1em", textTransform: "uppercase",
         lineHeight: 1.5, color: "#ffffff",
