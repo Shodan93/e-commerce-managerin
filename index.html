@@ -88,10 +88,7 @@
     <section aria-label="Begrüßung" style="{{ quoteBandStyle }}">
       <div style="{{ quoteInnerStyle }}">
         <div style="{{ quoteTextWrapStyle }}">
-          <blockquote style="{{ introAboutStyle }}"><span style="{{ quoteMarkOpenStyle }}" aria-hidden="true">&bdquo;</span>Auf dieser Seite zeige ich Ihnen, wie ich arbeite, mit einem Video meines ehemaligen Onlineshops und einer Case Study aus meiner Weiterbildung.<span style="{{ quoteMarkCloseStyle }}" aria-hidden="true">&ldquo;</span></blockquote>
-          <div style="{{ quoteCaptionStyle }}">
-            <span style="{{ quoteNameStyle }}">Svenja Mumelter</span>
-          </div>
+          <p style="{{ introAboutStyle }}">Auf dieser Seite zeige ich Ihnen, wie ich arbeite, mit einem Video meines ehemaligen Onlineshops und einer Case Study aus meiner Weiterbildung.</p>
         </div>
       </div>
     </section>
@@ -110,7 +107,7 @@
       </div>
       <dl style="{{ factsStyle }}">
         <div style="{{ factStyle }}"><dt style="{{ factNumStyle }}">5&nbsp;Jahre</dt><dd style="{{ factTextStyle }}">eigener Onlineshop als Mitgründerin</dd></div>
-        <div style="{{ factStyle }}"><dt style="{{ factNumStyle }}">10+&nbsp;Jahre</dt><dd style="{{ factTextStyle }}">im selben Unternehmen, von der Ausbildung bis zur Filial- und Studioleitung</dd></div>
+        <div style="{{ factStyle }}"><dt style="{{ factNumStyle }}">10+&nbsp;Jahre</dt><dd style="{{ factTextStyle }}">im selben Unternehmen, bis zur Filial- und Studioleitung</dd></div>
         <div style="{{ factStyle }}"><dt style="{{ factNumStyle }}">96&nbsp;%</dt><dd style="{{ factTextStyle }}">Abschlussergebnis als Applied E&#8209;Commerce Managerin</dd></div>
       </dl>
     </section>
@@ -346,7 +343,7 @@ class Component extends DCLogic {
         position: "relative", zIndex: 1,
         backgroundColor: "#1f3b3d", /* deep teal-slate */
         display: "flex", justifyContent: "center",
-        padding: m ? "24px 24px 26px 24px" : "24px 72px 26px 72px", /* compact: the band should not dominate the page */
+        padding: m ? "26px 24px" : "30px 72px", /* compact and even top/bottom: single statement, no name line */
       },
       quoteInnerStyle: {
         display: "flex", flexDirection: m ? "column" : "row",
