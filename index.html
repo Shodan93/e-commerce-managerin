@@ -375,12 +375,14 @@ class Component extends DCLogic {
         display: "flex", flexDirection: m ? "column" : "row",
         alignItems: m ? "flex-start" : "center",
         gap: m ? 44 : "clamp(56px, 7vw, 104px)",
+        justifyContent: "space-between",
         padding: m ? "60px 24px 64px 24px" : "108px 72px 116px 72px",
       },
       aboutPhotoWrapStyle: {
         position: "relative", flexShrink: 0,
-        width: m ? "min(calc(100% - 18px), 320px)" : "clamp(300px, 30vw, 420px)",
+        width: m ? "min(calc(100% - 18px), 290px)" : "clamp(260px, 26vw, 360px)",
         marginRight: m ? 18 : 28, marginBottom: m ? 18 : 28,
+        order: m ? 0 : 2, /* desktop: copy left, portrait right; mobile: portrait first */
       },
       aboutPhotoBlockStyle: {
         position: "absolute", top: m ? 18 : 28, left: m ? 18 : 28, right: m ? -18 : -28, bottom: m ? -18 : -28,
@@ -391,7 +393,7 @@ class Component extends DCLogic {
         aspectRatio: "4 / 5", objectFit: "cover", borderRadius: 18,
         border: "1px solid #e1e8e8", boxSizing: "border-box", /* white studio background needs a hairline edge on the off-white page */
       },
-      aboutTextStyle: { display: "flex", flexDirection: "column", gap: m ? 16 : 20, maxWidth: 680, minWidth: 0 },
+      aboutTextStyle: { display: "flex", flexDirection: "column", gap: m ? 16 : 20, maxWidth: 800, minWidth: 0, flex: m ? "0 0 auto" : "1 1 auto", order: 1 },
       aboutLeadStyle: {
         fontFamily: archivo, fontWeight: 500, fontSize: m ? 18 : 20, lineHeight: 1.6,
         color: strong, margin: m ? "4px 0 0 0" : "8px 0 0 0",
