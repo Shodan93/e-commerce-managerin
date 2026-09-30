@@ -81,7 +81,7 @@
       </div>
       <div style="{{ heroTextStyle }}">
         <p style="{{ heroKickerStyle }}">Bewerbung als E&#8209;Commerce Managerin</p>
-        <h1 style="{{ h1Style }}">Testen, messen, <span style="{{ h1AccentStyle }}">besser verkaufen.</span></h1>
+        <h1 style="{{ h1Style }}">UNTERNEHMERISCH GEDACHT. <span style="{{ h1AccentStyle }}">HANDS-ON UMGESETZT.</span></h1>
       </div>
     </header>
 
@@ -96,7 +96,7 @@
       </div>
     </section>
 
-    <section id="ueber-mich" aria-labelledby="ueber-mich-title" style="{{ aboutSectionStyle }}">
+    <section id="ueber-mich" aria-label="Kurz über mich" style="{{ aboutSectionStyle }}">
       <div style="{{ aboutStyle }}">
         <div style="{{ aboutPhotoWrapStyle }}">
           <div style="{{ aboutPhotoBlockStyle }}" aria-hidden="true"></div>
@@ -104,7 +104,6 @@
         </div>
         <div style="{{ aboutTextStyle }}">
           <span style="{{ sectionLabelStyle }}">Kurz über mich</span>
-          <h2 id="ueber-mich-title" style="{{ introH2Style }}">UNTERNEHMERISCH GEDACHT. <span style="{{ h2AccentStyle }}">HANDS-ON UMGESETZT.</span></h2>
           <p style="{{ aboutLeadStyle }}">Einen eigenen D2C-Onlineshop habe ich mitgegründet, von Grund auf aufgebaut und fünf Jahre lang betrieben. Dazu gehörten A/B-Tests, Newsletter und die laufende Optimierung der Customer Journey ebenso wie die Weiterentwicklung des Shops. Parallel habe ich ein Fotofachgeschäft mit Studio kaufmännisch geleitet, inklusive Einkauf sowie Umsatz-, Margen- und Personalverantwortung. Daher weiß ich, wie sich Entscheidungen unmittelbar auf Umsatz und Marge auswirken.</p>
           <p style="{{ aboutBodyStyle }}">Als mein langjähriger Arbeitgeber Insolvenz anmelden musste, habe ich die Gelegenheit genutzt und mein Praxiswissen mit einer Vollzeitweiterbildung im E-Commerce auf den aktuellen Stand gebracht. Dabei habe ich vorhandenes Wissen vertieft und gezielt um Shopify, UX-Design, CRM, Conversion-Tracking, GA4 und Marketing Automation erweitert. KI-Tools und Automatisierung setze ich gezielt ein, um Prozesse zu optimieren und wiederkehrende Aufgaben effizienter zu machen. Als Grafik-Designerin und Fotomedienfachfrau bringe ich außerdem ein sicheres Auge für visuelle Gestaltung mit, von Produktbildern und Shopseiten bis zu Bannern und Werbemitteln.</p>
         </div>
@@ -401,7 +400,7 @@ class Component extends DCLogic {
       aboutTextStyle: { display: "flex", flexDirection: "column", gap: m ? 16 : 20, maxWidth: 800, minWidth: 0, flex: m ? "0 0 auto" : "1 1 auto", order: 1 },
       aboutLeadStyle: {
         fontFamily: archivo, fontWeight: 500, fontSize: m ? 18 : 20, lineHeight: 1.6,
-        color: strong, margin: m ? "4px 0 0 0" : "8px 0 0 0",
+        color: strong, margin: 0, /* follows the small label directly (headline removed) */
       },
       aboutBodyStyle: {
         fontFamily: archivo, fontWeight: 400, fontSize: m ? 16 : 17, lineHeight: 1.7,
