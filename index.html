@@ -88,7 +88,7 @@
     <section aria-label="Begrüßung" style="{{ quoteBandStyle }}">
       <div style="{{ quoteInnerStyle }}">
         <div style="{{ quoteTextWrapStyle }}">
-          <blockquote style="{{ introAboutStyle }}"><span style="{{ quoteMarkOpenStyle }}" aria-hidden="true">&bdquo;</span>Statt eines klassischen Anschreibens zeige ich Ihnen hier, wie ich arbeite: mit einem Video meines eigenen Onlineshops und einer Case Study aus meiner Weiterbildung.<span style="{{ quoteMarkCloseStyle }}" aria-hidden="true">&ldquo;</span></blockquote>
+          <blockquote style="{{ introAboutStyle }}"><span style="{{ quoteMarkOpenStyle }}" aria-hidden="true">&bdquo;</span>Statt eines klassischen Anschreibens zeige ich Ihnen hier, wie ich arbeite: <span style="{{ quoteLine2Style }}">mit einem Video meines eigenen Onlineshops und einer Case Study aus meiner Weiterbildung.<span style="{{ quoteMarkCloseStyle }}" aria-hidden="true">&ldquo;</span></span></blockquote>
           <div style="{{ quoteCaptionStyle }}">
             <span style="{{ quoteNameStyle }}">Svenja Mumelter</span>
           </div>
@@ -345,27 +345,28 @@ class Component extends DCLogic {
         position: "relative", zIndex: 1,
         backgroundColor: "#1f3b3d", /* deep teal-slate */
         display: "flex", justifyContent: "center",
-        padding: m ? "26px 24px 28px 24px" : "28px 72px 30px 72px", /* compact: the band should not dominate the page */
+        padding: m ? "24px 24px 26px 24px" : "24px 72px 26px 72px", /* compact: the band should not dominate the page */
       },
       quoteInnerStyle: {
         display: "flex", flexDirection: m ? "column" : "row",
         alignItems: m ? "flex-start" : "center", justifyContent: "space-between",
         gap: m ? 28 : 72, width: "100%",
       },
-      quoteTextWrapStyle: { display: "flex", flexDirection: "column", gap: m ? 12 : 14, maxWidth: 840, minWidth: 0 },
+      quoteTextWrapStyle: { display: "flex", flexDirection: "column", gap: m ? 12 : 14, maxWidth: 1040, minWidth: 0 },
       /* editorial quote: calm white text, mint typographic quotation marks, opening mark hangs into the margin */
       introAboutStyle: {
         fontFamily: archivo, fontWeight: 400,
         fontSize: m ? 17 : 20, lineHeight: 1.6,
         color: "#ffffff", margin: 0,
       },
-      quoteParaStyle: { display: "block", marginTop: m ? 12 : 14 }, /* blank-line gap after the greeting */
+      /* desktop: break after "wie ich arbeite:" (statement / specifics); mobile wraps naturally */
+      quoteLine2Style: { display: m ? "inline" : "block" },
       quoteMarkOpenStyle: {
         display: "inline-block", width: "0.5em", marginLeft: "-0.5em",
         color: "var(--accent-mint)", fontWeight: 600,
       },
       quoteMarkCloseStyle: { color: "var(--accent-mint)", fontWeight: 600 },
-      quoteCaptionStyle: { display: "flex", flexDirection: "column", gap: 2, marginTop: m ? 10 : 12 },
+      quoteCaptionStyle: { display: "flex", flexDirection: "column", gap: 2, marginTop: m ? 10 : 10 },
       quoteNameStyle: {
         fontFamily: archivo, fontWeight: 700, fontSize: 15, letterSpacing: "0.1em", textTransform: "uppercase",
         lineHeight: 1.5, color: "#ffffff",
