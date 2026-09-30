@@ -369,7 +369,7 @@ class Component extends DCLogic {
       /* section = two-column row (copy | portrait, vertically centred) + key facts full width underneath, so no gap under the portrait */
       aboutSectionStyle: {
         display: "flex", flexDirection: "column", gap: m ? 32 : 56,
-        padding: m ? "60px 24px 64px 24px" : "108px 72px 116px 72px",
+        padding: m ? "44px 24px 64px 24px" : "60px 72px 116px 72px", /* top pulled up so hero intro and "Kurz über mich" read as one block */
       },
       aboutStyle: {
         display: "flex", flexDirection: m ? "column" : "row",
