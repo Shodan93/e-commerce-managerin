@@ -1,0 +1,11 @@
+{
+  "name": "e-commerce-managerin",
+  "compatibility_date": "2026-09-01",
+  "assets": {
+    "directory": "./"
+  },
+  "routes": [
+    // neutral on purpose: YER may forward this page to several (anonymous) clients
+    { "pattern": "e-commerce-managerin.mumelter.org", "custom_domain": true }
+  ]
+}
