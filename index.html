@@ -370,7 +370,7 @@ class Component extends DCLogic {
         fontFamily: archivo, fontWeight: 700, fontSize: 15, letterSpacing: "0.1em", textTransform: "uppercase",
         lineHeight: 1.5, color: "#ffffff",
       },
-      /* "Kurz über mich": large 4:5 portrait with a flat mint block offset behind it, copy + three key facts right */
+      /* "Kurz über mich": large 4:5 portrait with a flat teal block offset behind it, copy + three key facts right */
       aboutStyle: {
         display: "flex", flexDirection: m ? "column" : "row",
         alignItems: m ? "flex-start" : "center",
@@ -386,7 +386,7 @@ class Component extends DCLogic {
       },
       aboutPhotoBlockStyle: {
         position: "absolute", top: m ? 18 : 28, left: m ? 18 : 28, right: m ? -18 : -28, bottom: m ? -18 : -28,
-        backgroundColor: "#d7e9e4", borderRadius: 18,
+        backgroundColor: "var(--accent-teal)", borderRadius: 18, /* same teal as the accent headline line */
       },
       aboutPhotoStyle: {
         position: "relative", display: "block", width: "100%", height: "auto",
