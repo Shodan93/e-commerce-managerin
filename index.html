@@ -443,7 +443,7 @@ class Component extends DCLogic {
       h2AccentStyle: { display: "block", color: accent },
       approachLeadStyle: {
         fontFamily: archivo, fontWeight: 400, fontSize: m ? 17 : 18.5, lineHeight: 1.6,
-        color: bodyText, margin: m ? "4px 0 0 0" : "6px 0 0 0", maxWidth: 720,
+        color: bodyText, margin: m ? "4px 0 0 0" : "6px 0 0 0", maxWidth: 1296, /* runs on one line on wide screens */
       },
       /* three process steps as flat white tiles on the sunken section, big teal step numbers */
       stepsStyle: m ? {
