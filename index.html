@@ -88,7 +88,7 @@
     <section aria-label="Begrüßung" style="{{ quoteBandStyle }}">
       <div style="{{ quoteInnerStyle }}">
         <div style="{{ quoteTextWrapStyle }}">
-          <blockquote style="{{ introAboutStyle }}"><span style="{{ quoteMarkOpenStyle }}" aria-hidden="true">&bdquo;</span>Statt eines klassischen Anschreibens zeige ich Ihnen hier, wie ich arbeite: <span style="{{ quoteLine2Style }}">mit einem Video meines eigenen Onlineshops und einer Case Study aus meiner Weiterbildung.<span style="{{ quoteMarkCloseStyle }}" aria-hidden="true">&ldquo;</span></span></blockquote>
+          <blockquote style="{{ introAboutStyle }}"><span style="{{ quoteMarkOpenStyle }}" aria-hidden="true">&bdquo;</span>Auf dieser Seite zeige ich Ihnen, wie ich arbeite, mit einem Video meines ehemaligen Onlineshops und einer Case Study aus meiner Weiterbildung.<span style="{{ quoteMarkCloseStyle }}" aria-hidden="true">&ldquo;</span></blockquote>
           <div style="{{ quoteCaptionStyle }}">
             <span style="{{ quoteNameStyle }}">Svenja Mumelter</span>
           </div>
@@ -359,8 +359,6 @@ class Component extends DCLogic {
         fontSize: m ? 17 : 20, lineHeight: 1.6,
         color: "#ffffff", margin: 0,
       },
-      /* desktop: break after "wie ich arbeite:" (statement / specifics); mobile wraps naturally */
-      quoteLine2Style: { display: m ? "inline" : "block" },
       quoteMarkOpenStyle: {
         display: "inline-block", width: "0.5em", marginLeft: "-0.5em",
         color: "var(--accent-mint)", fontWeight: 600,
