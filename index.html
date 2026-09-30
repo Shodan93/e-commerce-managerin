@@ -140,7 +140,7 @@
       </ol>
       <div style="{{ toolsRowStyle }}">
         <span style="{{ sectionLabelStyle }}">Tools</span>
-        <ul style="{{ toolsListStyle }}"><li style="{{ toolChipStyle }}">Shopify</li><li style="{{ toolChipStyle }}">WordPress + WooCommerce</li><li style="{{ toolChipStyle }}">JTL-Shop</li><li style="{{ toolChipStyle }}">GA4</li><li style="{{ toolChipStyle }}">Google Tag Manager</li><li style="{{ toolChipStyle }}">Google Ads</li><li style="{{ toolChipStyle }}">Meta Ads</li><li style="{{ toolChipStyle }}">n8n</li><li style="{{ toolChipStyle }}">Claude Code</li><li style="{{ toolChipStyle }}">Adobe Photoshop</li><li style="{{ toolChipStyle }}">Figma</li></ul>
+        <ul style="{{ toolsListStyle }}"><li style="{{ toolChipStyle }}">Shopify</li><li style="{{ toolChipStyle }}">WordPress + WooCommerce</li><li style="{{ toolChipStyle }}">JTL-Shop</li><li style="{{ toolChipStyle }}">GA4</li><li style="{{ toolChipStyle }}">Google Tag Manager</li><li style="{{ toolChipStyle }}">Google Ads</li><li style="{{ toolChipStyle }}">Meta Ads</li><li style="{{ toolChipStyle }}">n8n</li><li style="{{ toolChipStyle }}">Claude Code</li><li style="{{ toolChipStyle }}">Photoshop CC</li><li style="{{ toolChipStyle }}">Figma</li></ul>
       </div>
       <section id="kontakt" aria-labelledby="kontakt-title" style="{{ ctaStyle }}">
         <div style="{{ ctaTextWrapStyle }}">
@@ -474,11 +474,11 @@ class Component extends DCLogic {
         display: "flex", flexDirection: m ? "column" : "row", flexWrap: "wrap",
         alignItems: m ? "flex-start" : "center", gap: m ? 12 : "12px 20px", width: "100%",
       },
-      toolsListStyle: { listStyle: "none", margin: 0, padding: 0, display: "flex", flexWrap: "wrap", gap: 8 },
+      toolsListStyle: { listStyle: "none", margin: 0, padding: 0, display: "flex", flexWrap: "wrap", gap: m ? 8 : "clamp(5px, 0.5vw, 7px)" },
       toolChipStyle: {
-        fontFamily: archivo, fontWeight: 600, fontSize: m ? 14 : 14.5, lineHeight: 1.3,
+        fontFamily: archivo, fontWeight: 600, fontSize: m ? 14 : "clamp(12.5px, 0.95vw, 13.5px)", lineHeight: 1.3,
         color: strong, backgroundColor: "var(--white)",
-        border: "1px solid var(--border-subtle)", borderRadius: 999, padding: "7px 14px",
+        border: "1px solid var(--border-subtle)", borderRadius: 999, padding: m ? "7px 14px" : "7px clamp(9px, 0.8vw, 11px)", /* desktop: scales a touch with the viewport so all pills stay on one row down to ~1280px */
       },
       skillTitleStyle: {
         fontFamily: archivo, fontWeight: 700, fontSize: m ? 18 : 19, lineHeight: 1.2,
