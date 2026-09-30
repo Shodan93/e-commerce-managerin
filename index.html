@@ -96,22 +96,24 @@
       </div>
     </section>
 
-    <section id="ueber-mich" aria-labelledby="ueber-mich-title" style="{{ aboutStyle }}">
-      <div style="{{ aboutPhotoWrapStyle }}">
-        <div style="{{ aboutPhotoBlockStyle }}" aria-hidden="true"></div>
-        <img src="assets/svenja-portrait-yer.jpg" alt="Svenja Mumelter" width="880" height="1100" style="{{ aboutPhotoStyle }}" />
+    <section id="ueber-mich" aria-labelledby="ueber-mich-title" style="{{ aboutSectionStyle }}">
+      <div style="{{ aboutStyle }}">
+        <div style="{{ aboutPhotoWrapStyle }}">
+          <div style="{{ aboutPhotoBlockStyle }}" aria-hidden="true"></div>
+          <img src="assets/svenja-portrait-yer.jpg" alt="Svenja Mumelter" width="880" height="1100" style="{{ aboutPhotoStyle }}" />
+        </div>
+        <div style="{{ aboutTextStyle }}">
+          <span style="{{ sectionLabelStyle }}">Kurz über mich</span>
+          <h2 id="ueber-mich-title" style="{{ introH2Style }}">UNTERNEHMERISCH GEDACHT. <span style="{{ h2AccentStyle }}">HANDS-ON UMGESETZT.</span></h2>
+          <p style="{{ aboutLeadStyle }}">Einen eigenen D2C-Onlineshop habe ich mitgegründet, von Grund auf aufgebaut und fünf Jahre lang betrieben. Dazu gehörten A/B-Tests, Newsletter und die laufende Optimierung der Customer Journey ebenso wie die Weiterentwicklung des Shops. Parallel habe ich ein Fotofachgeschäft mit Studio kaufmännisch geleitet, inklusive Einkauf sowie Umsatz-, Margen- und Personalverantwortung. Daher weiß ich, wie sich Entscheidungen unmittelbar auf Umsatz und Marge auswirken.</p>
+          <p style="{{ aboutBodyStyle }}">Als mein langjähriger Arbeitgeber Insolvenz anmelden musste, habe ich die Gelegenheit genutzt und mein Praxiswissen mit einer Vollzeitweiterbildung im E-Commerce auf den aktuellen Stand gebracht. Dabei habe ich vorhandenes Wissen vertieft und gezielt um Shopify, UX-Design, CRM, Conversion-Tracking, GA4 und Marketing Automation erweitert. KI-Tools und Automatisierung setze ich gezielt ein, um Prozesse zu optimieren und wiederkehrende Aufgaben effizienter zu machen. Als Grafik-Designerin und Fotomedienfachfrau bringe ich außerdem ein sicheres Auge für visuelle Gestaltung mit, von Produktbildern und Shopseiten bis zu Bannern und Werbemitteln.</p>
+        </div>
       </div>
-      <div style="{{ aboutTextStyle }}">
-        <span style="{{ sectionLabelStyle }}">Kurz über mich</span>
-        <h2 id="ueber-mich-title" style="{{ introH2Style }}">UNTERNEHMERISCH GEDACHT. <span style="{{ h2AccentStyle }}">HANDS-ON UMGESETZT.</span></h2>
-        <p style="{{ aboutLeadStyle }}">Einen eigenen D2C-Onlineshop habe ich mitgegründet, von Grund auf aufgebaut und fünf Jahre lang betrieben. Dazu gehörten A/B-Tests, Newsletter und die laufende Optimierung der Customer Journey ebenso wie die Weiterentwicklung des Shops. Parallel habe ich ein Fotofachgeschäft mit Studio kaufmännisch geleitet, inklusive Einkauf sowie Umsatz-, Margen- und Personalverantwortung. Daher weiß ich, wie sich Entscheidungen unmittelbar auf Umsatz und Marge auswirken.</p>
-        <p style="{{ aboutBodyStyle }}">Als mein langjähriger Arbeitgeber Insolvenz anmelden musste, habe ich die Gelegenheit genutzt und mein Praxiswissen mit einer Vollzeitweiterbildung im E-Commerce auf den aktuellen Stand gebracht. Dabei habe ich vorhandenes Wissen vertieft und gezielt um Shopify, UX-Design, CRM, Conversion-Tracking, GA4 und Marketing Automation erweitert. KI-Tools und Automatisierung setze ich gezielt ein, um Prozesse zu optimieren und wiederkehrende Aufgaben effizienter zu machen. Als Grafik-Designerin und Fotomedienfachfrau bringe ich außerdem ein sicheres Auge für visuelle Gestaltung mit, von Produktbildern und Shopseiten bis zu Bannern und Werbemitteln.</p>
-        <dl style="{{ factsStyle }}">
-          <div style="{{ factStyle }}"><dt style="{{ factNumStyle }}">5&nbsp;Jahre</dt><dd style="{{ factTextStyle }}">eigener Onlineshop als Mitgründerin</dd></div>
-          <div style="{{ factStyle }}"><dt style="{{ factNumStyle }}">10+&nbsp;Jahre</dt><dd style="{{ factTextStyle }}">im selben Unternehmen, von der Ausbildung bis zur Filial- und Studioleitung</dd></div>
-          <div style="{{ factStyle }}"><dt style="{{ factNumStyle }}">96&nbsp;%</dt><dd style="{{ factTextStyle }}">Abschlussergebnis als Applied E&#8209;Commerce Managerin</dd></div>
-        </dl>
-      </div>
+      <dl style="{{ factsStyle }}">
+        <div style="{{ factStyle }}"><dt style="{{ factNumStyle }}">5&nbsp;Jahre</dt><dd style="{{ factTextStyle }}">eigener Onlineshop als Mitgründerin</dd></div>
+        <div style="{{ factStyle }}"><dt style="{{ factNumStyle }}">10+&nbsp;Jahre</dt><dd style="{{ factTextStyle }}">im selben Unternehmen, von der Ausbildung bis zur Filial- und Studioleitung</dd></div>
+        <div style="{{ factStyle }}"><dt style="{{ factNumStyle }}">96&nbsp;%</dt><dd style="{{ factTextStyle }}">Abschlussergebnis als Applied E&#8209;Commerce Managerin</dd></div>
+      </dl>
     </section>
 
     <section id="ansatz" aria-labelledby="ansatz-title" style="{{ introStyle }}" data-section="intro">
@@ -370,12 +372,16 @@ class Component extends DCLogic {
         lineHeight: 1.5, color: "#ffffff",
       },
       /* "Kurz über mich": large 4:5 portrait with a flat teal block offset behind it, copy + three key facts right */
+      /* section = two-column row (copy | portrait, vertically centred) + key facts full width underneath, so no gap under the portrait */
+      aboutSectionStyle: {
+        display: "flex", flexDirection: "column", gap: m ? 32 : 56,
+        padding: m ? "60px 24px 64px 24px" : "108px 72px 116px 72px",
+      },
       aboutStyle: {
         display: "flex", flexDirection: m ? "column" : "row",
         alignItems: m ? "flex-start" : "center",
         gap: m ? 44 : "clamp(56px, 7vw, 104px)",
         justifyContent: "space-between",
-        padding: m ? "60px 24px 64px 24px" : "108px 72px 116px 72px",
       },
       aboutPhotoWrapStyle: {
         position: "relative", flexShrink: 0,
@@ -403,10 +409,10 @@ class Component extends DCLogic {
       },
       factsStyle: m ? {
         display: "flex", flexDirection: "column", gap: 18,
-        margin: "12px 0 0 0", paddingTop: 24, borderTop: "1px solid var(--border-subtle)", width: "100%",
+        margin: 0, paddingTop: 24, borderTop: "1px solid var(--border-subtle)", width: "100%",
       } : {
         display: "grid", gridTemplateColumns: "repeat(3, minmax(0, 1fr))", gap: 28,
-        margin: "16px 0 0 0", paddingTop: 28, borderTop: "1px solid var(--border-subtle)", width: "100%",
+        margin: 0, paddingTop: 32, borderTop: "1px solid var(--border-subtle)", width: "100%",
       },
       factStyle: { display: "flex", flexDirection: "column", gap: 6, minWidth: 0 },
       factNumStyle: {
